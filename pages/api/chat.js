@@ -1,4 +1,4 @@
-// api/chat.js - Vercel serverless function
+// api/chat.js - Vercel serverless function v2
 import OpenAI from 'openai';
 import { put } from '@vercel/blob';
 
