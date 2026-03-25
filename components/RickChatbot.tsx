@@ -87,15 +87,10 @@ const RickChatbot = () => {
 
       setIsThinking(false);
 
+      // Always show message immediately, audio is bonus
+      setMessages(prev => [...prev, rickMessage]);
       if (data.audioUrl) {
-        // Store as pending message until audio finishes
-        console.log('Received audio, setting as pending message');
-        setPendingMessage(rickMessage);
         setAudioUrl(data.audioUrl);
-      } else {
-        // No audio, add directly to chat history
-        console.log('No audio, adding message directly to chat');
-        setMessages(prev => [...prev, rickMessage]);
       }
 
     } catch (error) {
