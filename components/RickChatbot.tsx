@@ -187,7 +187,17 @@ const RickChatbot = () => {
           {/* Status indicator */}
           <div className="text-center text-[#ff5e00] mt-2">
             {isThinking && <p>Rick is thinking...</p>}
-            {isPlayingAudio && <p>Rick is talking...</p>}
+            {isPlayingAudio && (
+      <div>
+        <p>Rick is talking...</p>
+        <button
+          onClick={() => audioRef.current?.play()}
+          className="mt-1 px-3 py-1 bg-[#ff5e00] text-white rounded text-sm"
+          >
+          ▶ Tap to hear Rick
+        </button>
+      </div>
+    )}
           </div>
 
           {/* Controls */}
