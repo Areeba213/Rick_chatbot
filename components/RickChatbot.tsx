@@ -199,7 +199,13 @@ const RickChatbot = () => {
               <Trash2 size={16} />
               <span>Clear Chat</span>
             </button>
-            
+            <button
+              onClick={toggleChatHistory}
+              className="flex items-center space-x-2 px-4 py-2 bg-black hover:bg-gray-800 text-white rounded-lg transition-colors duration-200 border border-[#ff5e00]"
+              >
+  <MessageSquare size={16} />
+  <span>{showChatHistory ? 'Hide Chat' : 'Show Chat'}</span>
+</button>
             {audioUrl && (
               <button
                 onClick={replayAudio}
