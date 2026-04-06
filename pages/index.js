@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import RickChatbot from '../components/RickChatbot'
+import ArtScanner from '../components/ArtScanner'
+import { useState } from 'react'
 
 export default function Home() {
+  const [authenticated, setAuthenticated] = useState(false)
+
   return (
     <>
       <Head>
@@ -9,7 +13,11 @@ export default function Home() {
         <meta name="description" content="Talk to Rick from Rick and Morty!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <RickChatbot />
+      {authenticated ? (
+        <RickChatbot />
+      ) : (
+        <ArtScanner onAuthenticated={() => setAuthenticated(true)} />
+      )}
     </>
   )
 }
