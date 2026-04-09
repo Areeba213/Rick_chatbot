@@ -171,7 +171,7 @@ export default function ArtScanner({ onAuthenticated }: ArtScannerProps) {
         throw new Error('Invalid similarity calculation');
       }
       
-      const threshold = 0.55;
+      const threshold = 0.25;
       
       if (similarity > threshold) {
         setStatusMessage('✓ Art print verified!');
