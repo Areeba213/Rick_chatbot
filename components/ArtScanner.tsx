@@ -243,7 +243,8 @@ export default function ArtScanner({ onAuthenticated }: ArtScannerProps) {
         </h2>
         
         {/* Camera Preview Box */}
-        <div className="relative bg-black rounded-2xl overflow-hidden mb-6 aspect-video border-4 border-green-600">
+        <div className="relative bg-black rounded-2xl overflow-hidden mb-6 border-4 border-green-600 mx-auto"
+          style={{ aspectRatio: '2/3', maxWidth: '360px' }}>
           <video
             ref={videoRef}
             autoPlay
